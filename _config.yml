@@ -100,5 +100,7 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:orduster/orduster.github.io.git
+  repo: 
+    coding: git@e.coding.net:orduster/orduster.git
+    github: git@github.com:orduster/orduster.github.io.git
   branch: master
