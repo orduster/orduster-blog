@@ -129,7 +129,7 @@ scheme: Gemini
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
   GitHub: https://github.com/orduster || github
-  E-Mail: mailto:orduster@qq.com || envelope
+  E-Mail: mailto:3423078511@qq.com || envelope
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
@@ -251,7 +251,7 @@ post_wordcount:
 
 # Declare license on posts
 post_copyright:
-  enable: false
+  enable: true
   license: CC BY-NC-SA 3.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
 
@@ -380,7 +380,7 @@ changyan:
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://valine.js.org
 valine:
-  enable: true
+  enable: false
   appid: Ub4B2IA9v0A6TLGFOls9fsJM-gzGzoHsz  # your leancloud application appid
   appkey: tY6pwKJHRcQ3U0gQIYxxx1PX  # your leancloud application appkey
   notify: true # 评论回复邮件 , https://github.com/xCss/Valine/wiki

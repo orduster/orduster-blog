@@ -13,7 +13,7 @@ timezone: '' # 网站的时区
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://orduster.github.io/  # 网站的url，如果不在域名根目录，应包含子目录，且root要设置为`/子目录/`
+url: https://blog.orduster.top/  # 网站的url，如果不在域名根目录，应包含子目录，且root要设置为`/子目录/`
 root: / # 网站的根目录
 # permalink: :year/:month/:day/:title/    #文章永久链接的形成模版。每一篇文章都有唯一的url。
 permalink: :category/:title/
