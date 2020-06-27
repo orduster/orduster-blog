@@ -18,6 +18,7 @@ root: / # 网站的根目录
 # permalink: :year/:month/:day/:title/    #文章永久链接的形成模版。每一篇文章都有唯一的url。
 permalink: :category/:title/
 permalink_defaults:
+
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
@@ -102,5 +103,4 @@ deploy:
   type: git
   repo: 
     coding: git@e.coding.net:orduster/orduster.git
-    github: git@github.com:orduster/orduster.github.io.git
   branch: master
