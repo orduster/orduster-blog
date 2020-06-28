@@ -21,6 +21,15 @@ http://mirrors.aliyun.com/centos/7/isos/x86_64/
 
 ![1592754358198](Linux安装/1592754358198.png)
 
+| ISO 镜像版本                        | 说明                                                     |
+| ----------------------------------- | -------------------------------------------------------- |
+| CentOS-7-x86_64-DVD-2003.iso        | 标准安装版（推荐）                                       |
+| CentOS-7-x86_64-Everything-2003.iso | 完整版，集成所有软件，用来补充系统的软件或者填充本地镜像 |
+| CentOS-7-x86_64-LiveGNOME-2003.iso  | GNOME 桌面版                                             |
+| CentOS-7-x86_64-LiveKDE-2003.iso    | KDE 桌面版                                               |
+| CentOS-7-x86_64-Minimal-2003.iso    | 精简版，携带的软件最少                                   |
+| CentOS-7-x86_64-NetInstall-2003.iso | 网络安装版，从网络安装或者救援系统                       |
+
 
 
 # 2. 使用  VMware  安装
@@ -133,75 +142,75 @@ http://mirrors.aliyun.com/centos/7/isos/x86_64/
 
 1. 虚拟机设置，使用 NAT 模式。
 
-   ![1592756530144](Linux安装/1592756530144.png)
+![1592756530144](Linux安装/1592756530144.png)
 
 
 
 2. 查看网关地址并记住。编辑—>虚拟机网络编辑器，记住自己的网关地址。
 
-   ![1592756731656](Linux安装/1592756731656.png)
+![1592756731656](Linux安装/1592756731656.png)
 
 
 
 3.  修改网卡信息 。
 
-   ```bash
-   # 进入网卡文件所在文件夹
-   cd /etc/sysconfig/network-scripts
-   
-   # 查看网卡文件，不同版本的 centos7，网卡名字不同，eno1677(centos7.0)，ens33(centos7.3) 
-   ls
-   
-   # 修改网卡信息，管理员账号可以不用 sudo
-   sudo vi ifcfg-ens33
-   ```
+```bash
+# 进入网卡文件所在文件夹
+cd /etc/sysconfig/network-scripts
 
-   ![1592756981748](Linux安装/1592756981748.png)
+# 查看网卡文件，不同版本的 centos7，网卡名字不同，eno1677(centos7.0)，ens33(centos7.3) 
+ls
 
-   ```bash
-   # 此处为具体网卡配置，带注释的地方需要配置
-   
-   TYPE="Ethernet"
-   PROXY_METHOD="none"
-   BROWSER_ONLY="no"
-   # 开机协议设置为 static
-   BOOTPROTO="static"
-   DEFROUTE="yes"
-   IPV4_FAILURE_FATAL="no"
-   IPV6INIT="yes"
-   IPV6_AUTOCONF="yes"
-   IPV6_DEFROUTE="yes"
-   IPV6_FAILURE_FATAL="no"
-   IPV6_ADDR_GEN_MODE="stable-privacy"
-   NAME="ens33"
-   UUID="eba23382-ebae-45c9-9faf-203e4417b8f4"
-   DEVICE="ens33"
-   # 开机启动
-   ONBOOT="yes"
-   
-   # 设置为想要固定的ip地址
-   IPADDR="192.168.66.221"
-   # 子网掩码
-   NETMASK="255.255.255.0"
-   # 网关，需要和 VMnet8中设置的网关保持一致
-   GATEWAY="192.168.66.2"
-   # 主 DNS1 地址，按照设置即可
-   DNS1="114.114.114.114"
-   ```
+# 修改网卡信息，管理员账号可以不用 sudo
+sudo vi ifcfg-ens33
+```
 
-   ![1592757271840](Linux安装/1592757271840.png)
+![1592756981748](Linux安装/1592756981748.png)
 
-   ```bash
-   # 重启网卡
-   service network restart
-   
-   # 测试是否连通，是否连通外网，本机 ip 地址是否正确
-   ping baidu.com
-   
-   ip addr
-   ```
+```bash
+# 此处为具体网卡配置，带注释的地方需要配置
 
-   ![1592757434183](Linux安装/1592757434183.png)
+TYPE="Ethernet"
+PROXY_METHOD="none"
+BROWSER_ONLY="no"
+# 开机协议设置为 static
+BOOTPROTO="static"
+DEFROUTE="yes"
+IPV4_FAILURE_FATAL="no"
+IPV6INIT="yes"
+IPV6_AUTOCONF="yes"
+IPV6_DEFROUTE="yes"
+IPV6_FAILURE_FATAL="no"
+IPV6_ADDR_GEN_MODE="stable-privacy"
+NAME="ens33"
+UUID="eba23382-ebae-45c9-9faf-203e4417b8f4"
+DEVICE="ens33"
+# 开机启动
+ONBOOT="yes"
+
+# 设置为想要固定的ip地址
+IPADDR="192.168.66.221"
+# 子网掩码
+NETMASK="255.255.255.0"
+# 网关，需要和 VMnet8中设置的网关保持一致
+GATEWAY="192.168.66.2"
+# 主 DNS1 地址，按照设置即可
+DNS1="114.114.114.114"
+```
+
+![1592757271840](Linux安装/1592757271840.png)
+
+```bash
+# 重启网卡
+service network restart
+
+# 测试是否连通，是否连通外网，本机 ip 地址是否正确
+ping baidu.com
+
+ip addr
+```
+
+![1592757434183](Linux安装/1592757434183.png)
 
 
 
