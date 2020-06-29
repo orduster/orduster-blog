@@ -146,7 +146,7 @@ vim /etc/docker/daemon.json
 可以将下面的加速地址换成自己的
 ```
 {
-    "registry-mirrors": ["http://hub-mirror.c.163.com"]
+    "registry-mirrors": ["https://uksg0tr3.mirror.aliyuncs.com"]
 }
 ```
 
